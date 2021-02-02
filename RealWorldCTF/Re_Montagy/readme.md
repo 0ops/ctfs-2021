@@ -31,9 +31,7 @@ blockchain, 6 solves, 378 points
 
 ## TL;DR
 
-- TEA
-- ...
-- ...
+Use TEA equivalent keys to flip some opcodes and create backdoors, then find a JOP chain.
 
 ## Background
 
