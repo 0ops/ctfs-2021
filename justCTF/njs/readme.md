@@ -13,7 +13,7 @@ Calculator.prototype.toString = function(prop) {
 
 We can leverage this function to get any child of `this.result`, then assign it back to `this.result`. 
 
-Just as other js sandbox escaping challenges, we start by finding a way to get a function constructor, which could give us a chance to run arbitary script. This could be done by using `[{"op":"toString","x":"constructor","y":""},{"op":"toString","x":"constructor","y":""}]`, which literially means `calc.result.constructor.constructor`. Then we use `addEquation` to call this constructor function with two parameters. The first one is the parameter of the function, and the second is the code that we want to execute: 
+Just as other js sandbox escaping challenges, we start by finding a way to get a function constructor, which could give us a chance to run arbitrary script. This could be done by using `[{"op":"toString","x":"constructor","y":""},{"op":"toString","x":"constructor","y":""}]`, which literally means `calc.result.constructor.constructor`. Then we use `addEquation` to call this constructor function with two parameters. The first one is the parameter of the function, and the second is the code that we want to execute: 
 
 ```
 [{"op":"toString","x":"constructor","y":""},{"op":"toString","x":"constructor","y":""},{"op":"result","x":"a,b","y":"return 114514"}]
